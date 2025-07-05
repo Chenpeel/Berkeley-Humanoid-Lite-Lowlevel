@@ -111,7 +111,7 @@ class Se2Gamepad:
             mode_switch = 2
 
         # Enter idle mode (B or Left/Right Thumbstick)
-        if self._states.get(XInputEntry.BTN_B) or self._states.get(XInputEntry.BTN_THUMB_L) or self._states.get(XInputEntry.BTN_THUMB_R):
+        if self._states.get(XInputEntry.BTN_X) or self._states.get(XInputEntry.BTN_THUMB_L) or self._states.get(XInputEntry.BTN_THUMB_R):
             mode_switch = 1
 
         self.commands["mode_switch"] = mode_switch
