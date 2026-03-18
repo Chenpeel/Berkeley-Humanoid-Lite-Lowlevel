@@ -1,7 +1,5 @@
-pyserial
-python-can
-cc.udp
-onnxruntime
-inputs
-pynput
-tables
+# 兼容仍使用 requirements.txt 的旧流程。
+# 新的推荐方式是：
+#   uv sync
+#   uv sync --extra rl --extra tools
+-e .[rl,tools]

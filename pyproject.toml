@@ -23,12 +23,31 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
 ]
 dependencies = [
+    "cc.udp",
+    "inputs",
+    "loop-rate-limiters",
+    "numpy",
+    "omegaconf",
     "psutil",
+    "pyserial",
+    "python-can",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+rl = [
+    "onnxruntime",
+    "torch",
+]
+tools = [
+    "scipy",
 ]
 
 [project.urls]
 repository = "https://github.com/HybridRobotics/Berkeley-Humanoid-Lite-Lowlevel"
 
 [tool.setuptools]
-packages = ["berkeley_humanoid_lite_lowlevel"]
 zip-safe = false
+
+[tool.setuptools.packages.find]
+include = ["berkeley_humanoid_lite_lowlevel*"]
