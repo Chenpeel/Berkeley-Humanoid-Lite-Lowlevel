@@ -58,10 +58,10 @@ uv run python ./scripts/motor/ping.py -c can0 -i 1
 uv run python ./scripts/motor/move_angle.py -c can0 -i 1 --target-deg 5
 ```
 
-To repeat a small motion cycle with the uv-managed project environment:
+To repeat a small motion cycle directly from Python:
 
 ```bash
-bash ./scripts/motor/move_angle.sh 1 5 2 can0
+uv run python ./scripts/motor/move_angle.py -c can0 -i 1 --target-deg 5 --cycles 2
 ```
 
 If the actuator was power-cycled and needs electrical offset calibration:
